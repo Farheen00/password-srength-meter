@@ -67,7 +67,7 @@ if option == "Check Password Strength":
                 
                 if score == 4:
                     st.success("✅ Strong Password!")
-                    st.balloons() 
+                     
                 elif score == 3:
                     st.warning("⚠️ Moderate Password - Consider adding more security features.")
                 else:
