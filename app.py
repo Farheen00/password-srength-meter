@@ -67,12 +67,9 @@ if option == "Check Password Strength":
                 
                 if score == 4:
                     st.success("✅ Strong Password!")
-                    if password not in st.session_state["saved_passwords"]:
-                        st.session_state["saved_passwords"].append(password)
+                    st.balloons() 
                 elif score == 3:
                     st.warning("⚠️ Moderate Password - Consider adding more security features.")
-                    if password not in st.session_state["saved_passwords"]:
-                        st.session_state["saved_passwords"].append(password)
                 else:
                     st.error("❌ Weak Password - Improve it using the suggestions below.")
                 
@@ -87,7 +84,6 @@ elif option == "Generate Strong Password":
         if st.button("⚡ Generate Password", use_container_width=True):
             strong_password = generate_strong_password(length)
             st.success(f"🔑 Your Strong Password: `{strong_password}`")
-            
             st.balloons() 
           
                 
